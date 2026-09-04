@@ -1,4 +1,4 @@
-### 📁 Case Study 2: Network Traffic Analysis & Soc Triage
+### Case Study 2: Network Traffic Analysis & Soc Triage
 
 * **Analytical Objective:** Investigate a captured network packet payload following multiple SOC alerts for FormBook/XLoader command-and-control (C2) check-in traffic, in order to identify the infected host, trace the compromise, and attribute it to a specific user account.
 
