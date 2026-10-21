@@ -1,32 +1,42 @@
-### Case Study 2: Network Traffic Analysis & Soc Triage
+# Cybersecurity & SOC Operations Portfolio
 
-* **Analytical Objective:** Investigate a captured network packet payload following multiple SOC alerts for FormBook/XLoader command-and-control (C2) check-in traffic, in order to identify the infected host, trace the compromise, and attribute it to a specific user account.
+Hands-on SOC and incident response case studies focused on network reconnaissance, traffic analysis, and endpoint triage.
 
-* **Scenario:** While covering a SOC shift, six alerts fired within a three-minute window flagging outbound HTTP GET requests to known FormBook C2 infrastructure. A packet capture (pcap) covering the alert window was pulled for investigation to identify the infected host on the internal `172.16.8.0/24` network.
+## Projects
 
-* **Evidence:**
-  ![Wireshark Beaconing Pattern](./screenshots/case2_wireshark_beaconing.png)
-  *Filtered view showing internal host `172.16.8.49` sending repeated HTTP GET check-ins to multiple external C2 IP addresses.*
+### 1. Case 1: Nmap Recon & Triage
+[View project](./projects/case-1-nmap/README.md)
 
-  ![Wireshark Kerberos Attribution](./screenshots/case2_wireshark_attribution.png)
-  *Kerberos AS-REQ traffic showing the `cname-string: rvance` field, attributing the infection to a specific domain user account.*
+- Host discovery and subnet enumeration
+- TCP/UDP service reconnaissance
+- SMB analysis and asset triage
+- Raw scan artifacts and supporting evidence
 
-* **Analysis:** Applied the Boolean display filter `ip.src == 172.16.8.49 && http.request.method == "GET"` to isolate repeated outbound GET check-ins from internal host `172.16.8.49` to six distinct external C2 addresses — confirming active beaconing consistent with the alerted FormBook/XLoader behavior. Pivoted to the host's MAC address (`00:12:f0:28:d4:34`) and hostname (`DESKTOP-5NLV63K`, via NetBIOS traffic) to fully identify the physical device. Attributed the infection to a specific user account by filtering Kerberos authentication traffic with `kerberos.CNameString`, excluding machine accounts (`$` suffix), and identifying the account `rvance`. LDAP directory traffic was found to be SASL/Kerberos-encrypted, preventing direct network-based recovery of the account's full display name; this was later confirmed as **Raymond Vance** via the exercise's incident documentation.
+### 2. Case 2: Wireshark Traffic Analysis
+[View project](./projects/case-2-wireshark/README.md)
 
-* **Indicators of Compromise (IOCs):**
+- PCAP review and packet filtering
+- HTTP C2 detection
+- Host attribution and IOC identification
+- Kerberos and network investigation
 
-| Type | Indicator | Notes |
-|---|---|---|
-| Malware Family | XLoader (alerted as FormBook) | Rebrand/successor of FormBook |
-| Infected Host IP | 172.16.8.49 | Internal victim |
-| Infected Host MAC | 00:12:f0:28:d4:34 | |
-| Infected Hostname | DESKTOP-5NLV63K | |
-| Compromised User | rvance (Raymond Vance) | |
-| C2 IP | 172.64.155.76:80 | GET check-in |
-| C2 IP | 146.59.71.167:80 | GET check-in |
-| C2 IP | 38.182.168.246:80 | GET check-in |
-| C2 IP | 45.130.41.161:80 | GET check-in |
-| C2 IP | 172.67.162.153:80 | GET check-in |
-| C2 IP | 121.54.163.148:80 | GET check-in |
+### 3. Case 3: PowerShell IR Playbook
+[View project](./projects/case-3-powershell/README.md)
 
-* **Why It Matters:** This case demonstrates the core SOC Tier 1/2 workflow — moving from a raw automated alert to a fully attributed incident. Rather than stopping at "this IP triggered an alert," the investigation traces the compromise through host identification, network artifact correlation, and authentication traffic to answer the question a real incident report requires: *which device, and which person, needs to be contained.*
+- PowerShell detection and containment workflow
+- Registry, service, and task investigation
+- Evidence preservation and triage automation
+
+## Skills
+- Nmap
+- Wireshark
+- PowerShell
+- SOC triage
+- Incident response workflow
+- Threat hunting support
+
+## About
+This repository documents practical cybersecurity investigations and SOC-style workflows developed through hands-on lab exercises.
+
+## Career Focus
+Entry-level SOC Analyst / Incident Response / Threat Detection
