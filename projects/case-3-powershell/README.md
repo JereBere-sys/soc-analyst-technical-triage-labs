@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/36d6bcb9-fc2e-43fa-968b-187e1ce1c397" /># Case Study 3: Automated Endpoint Incident Response Playbook
+# Case Study 3: Automated Endpoint Incident Response Playbook
 
 **Analytical Objective:** Write a PowerShell script that automates the first-response
 steps against the infected host found in Case Study 2 — detect the C2 connection,
@@ -29,7 +29,7 @@ IPs. That's expected here, and it confirms the detection logic actually works be
 it's needed on a real infection.
 
 **Evidence:**
-![Phase 1 - Detect](phase-1.jpeg)
+![Phase 1 - Detect](screenshots/phase-1.jpeg)
 
 ---
 
@@ -57,7 +57,7 @@ Only those six IPs are blocked outbound — nothing else about the firewall chan
 the rules can be removed with `Remove-NetFirewallRule`.
 
 **Evidence:**
-![Phase 2 - Contain](phase-2.jpeg)
+![Phase 2 - Contain](screenshots/phase-2.jpeg)
 
 ---
 
@@ -80,7 +80,7 @@ prints to the screen — Phase 4 saves the full, uncapped list to file.
 didn't flag a live connection. Services and scheduled tasks both pulled fine.
 
 **Evidence:**
-![Phase 3 - Investigate](phase-3.jpeg)
+![Phase 3 - Investigate](screenshots/phase-3.jpeg)
 
 ---
 
@@ -99,7 +99,7 @@ services, scheduled tasks, and detection results if any — gets written to its 
 output line.
 
 **Evidence:**
-![Phase 4 - Preserve](phase-4.jpeg)
+![Phase 4 - Preserve](screenshots/phase-4.jpeg)
 
 ---
 
