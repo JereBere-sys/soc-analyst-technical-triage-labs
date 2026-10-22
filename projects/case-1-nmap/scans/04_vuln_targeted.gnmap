@@ -1,0 +1,4 @@
+# Nmap 7.98 scan initiated Tue Oct 20 13:40:22 2026 as: nmap -sV -p 21,22,23,25,80,445 --script vuln -oA 04_vuln_targeted 172.16.8.20
+Host: 172.16.8.20 ()	Status: Up
+Host: 172.16.8.20 ()	Ports: 21/open/tcp//ftp//vsftpd 2.3.4/, 22/open/tcp//ssh//OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)/, 23/open/tcp//telnet//Linux telnetd/, 25/open/tcp//smtp//Postfix smtpd/, 80/open/tcp//http//Apache httpd 2.2.8 ((Ubuntu) DAV|2)/, 445/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/
+# Nmap done at Tue Oct 20 13:45:52 2026 -- 1 IP address (1 host up) scanned in 330.36 seconds

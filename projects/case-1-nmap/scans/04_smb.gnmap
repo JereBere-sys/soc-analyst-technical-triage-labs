@@ -1,0 +1,6 @@
+# Nmap 7.98 scan initiated Tue Oct 20 12:50:33 2026 as: nmap -p 445 --script smb-protocols,smb2-security-mode,smb-os-discovery -iL live_hosts.txt -oA 04_smb
+Host: 172.16.8.20 ()	Status: Up
+Host: 172.16.8.20 ()	Ports: 445/open/tcp//microsoft-ds//Samba smbd 3.0.20-Debian/
+Host: 172.16.8.49 ()	Status: Up
+Host: 172.16.8.49 ()	Ports: 445/closed/tcp//microsoft-ds///
+# Nmap done at Tue Oct 20 12:50:34 2026 -- 2 IP addresses (2 hosts up) scanned in 1.14 seconds

@@ -1,0 +1,54 @@
+# Nmap 7.98 scan initiated Tue Oct 20 12:34:39 2026 as: nmap -sU --top-ports 20 -iL live_hosts.txt -oA 03_udp
+Nmap scan report for 172.16.8.20
+Host is up (0.00035s latency).
+
+PORT      STATE         SERVICE
+53/udp    open          domain
+67/udp    open|filtered dhcps
+68/udp    open|filtered dhcpc
+69/udp    open|filtered tftp
+123/udp   closed        ntp
+135/udp   closed        msrpc
+137/udp   closed        netbios-ns
+138/udp   open|filtered netbios-dgm
+139/udp   closed        netbios-ssn
+161/udp   closed        snmp
+162/udp   closed        snmptrap
+445/udp   closed        microsoft-ds
+500/udp   open|filtered isakmp
+514/udp   open|filtered syslog
+520/udp   open|filtered route
+631/udp   closed        ipp
+1434/udp  closed        ms-sql-m
+1900/udp  closed        upnp
+4500/udp  open|filtered nat-t-ike
+49152/udp closed        unknown
+MAC Address: 08:00:27:E5:1B:17 (Oracle VirtualBox virtual NIC)
+
+Nmap scan report for 172.16.8.49
+Host is up (0.00036s latency).
+
+PORT      STATE         SERVICE
+53/udp    open|filtered domain
+67/udp    open|filtered dhcps
+68/udp    closed        dhcpc
+69/udp    open|filtered tftp
+123/udp   closed        ntp
+135/udp   open|filtered msrpc
+137/udp   closed        netbios-ns
+138/udp   closed        netbios-dgm
+139/udp   closed        netbios-ssn
+161/udp   closed        snmp
+162/udp   closed        snmptrap
+445/udp   closed        microsoft-ds
+500/udp   open|filtered isakmp
+514/udp   open|filtered syslog
+520/udp   open|filtered route
+631/udp   closed        ipp
+1434/udp  closed        ms-sql-m
+1900/udp  closed        upnp
+4500/udp  open|filtered nat-t-ike
+49152/udp closed        unknown
+MAC Address: 08:00:27:A4:8E:5B (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Tue Oct 20 12:34:49 2026 -- 2 IP addresses (2 hosts up) scanned in 9.14 seconds

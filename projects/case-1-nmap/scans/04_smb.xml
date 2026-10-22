@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Tue Oct 20 12:50:33 2026 as: nmap -p 445 -&#45;script smb-protocols,smb2-security-mode,smb-os-discovery -iL live_hosts.txt -oA 04_smb -->
+<nmaprun scanner="nmap" args="nmap -p 445 -&#45;script smb-protocols,smb2-security-mode,smb-os-discovery -iL live_hosts.txt -oA 04_smb" start="1792515033" startstr="Tue Oct 20 12:50:33 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.16.8.49" addrtype="ipv4"/>
+<address addr="08:00:27:A4:8E:5B" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.16.8.20" addrtype="ipv4"/>
+<address addr="08:00:27:E5:1B:17" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1792515034" endtime="1792515034"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.16.8.20" addrtype="ipv4"/>
+<address addr="08:00:27:E5:1B:17" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="microsoft-ds" product="Samba smbd" version="3.0.20-Debian" method="probed" conf="10"/></port>
+</ports>
+<hostscript><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+</table>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.20-Debian)&#xa;  Computer name: metasploitable&#xa;  NetBIOS computer name: &#xa;  Domain name: localdomain&#xa;  FQDN: metasploitable.localdomain&#xa;  System time: 2026-10-05T19:18:39-04:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 3.0.20-Debian</elem>
+<elem key="server"></elem>
+<elem key="date">2026-10-05T19:18:39-04:00</elem>
+<elem key="fqdn">metasploitable.localdomain</elem>
+<elem key="domain_dns">localdomain</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script></hostscript><times srtt="283" rttvar="3775" to="100000"/>
+</host>
+<host starttime="1792515034" endtime="1792515034"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.16.8.49" addrtype="ipv4"/>
+<address addr="08:00:27:A4:8E:5B" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="closed" reason="reset" reason_ttl="64"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="220" rttvar="3821" to="100000"/>
+</host>
+<runstats><finished time="1792515034" timestr="Tue Oct 20 12:50:34 2026" summary="Nmap done at Tue Oct 20 12:50:34 2026; 2 IP addresses (2 hosts up) scanned in 1.14 seconds" elapsed="1.14" exit="success"/><hosts up="2" down="0" total="2"/>
+</runstats>
+</nmaprun>

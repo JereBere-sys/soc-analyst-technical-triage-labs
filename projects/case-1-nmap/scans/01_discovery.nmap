@@ -1,0 +1,10 @@
+# Nmap 7.98 scan initiated Tue Oct 20 12:07:35 2026 as: nmap -sn -oA 01_discovery 172.16.8.0/24
+Nmap scan report for 172.16.8.20
+Host is up (0.00047s latency).
+MAC Address: 08:00:27:E5:1B:17 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 172.16.8.49
+Host is up (0.00026s latency).
+MAC Address: 08:00:27:A4:8E:5B (Oracle VirtualBox virtual NIC)
+Nmap scan report for JerryLaptop.local (172.16.8.1)
+Host is up.
+# Nmap done at Tue Oct 20 12:07:38 2026 -- 256 IP addresses (3 hosts up) scanned in 2.97 seconds

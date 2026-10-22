@@ -1,0 +1,28 @@
+# Nmap 7.98 scan initiated Tue Oct 20 12:50:33 2026 as: nmap -p 445 --script smb-protocols,smb2-security-mode,smb-os-discovery -iL live_hosts.txt -oA 04_smb
+Nmap scan report for 172.16.8.20
+Host is up (0.00028s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+MAC Address: 08:00:27:E5:1B:17 (Oracle VirtualBox virtual NIC)
+
+Host script results:
+| smb-protocols: 
+|   dialects: 
+|_    NT LM 0.12 (SMBv1) [dangerous, but default]
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   Computer name: metasploitable
+|   NetBIOS computer name: 
+|   Domain name: localdomain
+|   FQDN: metasploitable.localdomain
+|_  System time: 2026-10-05T19:18:39-04:00
+
+Nmap scan report for 172.16.8.49
+Host is up (0.00022s latency).
+
+PORT    STATE  SERVICE
+445/tcp closed microsoft-ds
+MAC Address: 08:00:27:A4:8E:5B (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Tue Oct 20 12:50:34 2026 -- 2 IP addresses (2 hosts up) scanned in 1.14 seconds

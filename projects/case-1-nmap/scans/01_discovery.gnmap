@@ -1,0 +1,5 @@
+# Nmap 7.98 scan initiated Tue Oct 20 12:07:35 2026 as: nmap -sn -oA 01_discovery 172.16.8.0/24
+Host: 172.16.8.20 ()	Status: Up
+Host: 172.16.8.49 ()	Status: Up
+Host: 172.16.8.1 (JerryLaptop.local)	Status: Up
+# Nmap done at Tue Oct 20 12:07:38 2026 -- 256 IP addresses (3 hosts up) scanned in 2.97 seconds
